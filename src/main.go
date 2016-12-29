@@ -22,7 +22,7 @@ func main() {
 	http.HandleFunc("/",handler)
 	http.ListenAndServe("localhost:9090",nil)
 }
-func handler(w http.ResponseWriter){
+func handler(w http.ResponseWriter,r *http.Request){
 
 	str :=	"<svg xmlns='http://www.w3.org/2000/svg' "+
 		"style='stroke: grey; fill: white; stroke-width: 0.7' "+
