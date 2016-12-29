@@ -9,11 +9,10 @@ type Page struct {
 	body []byte
 }
 
-func (p *Page) genHTML(){
+func (p *Page) genHTML() {
 	filename := p.name + ".html"
-	return ioutil.WriteFile(filename,p.body,0600)
+	return ioutil.WriteFile(filename, p.body, 0600)
 }
 
-
-func init(){
+func init() {
 }
