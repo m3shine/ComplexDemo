@@ -19,8 +19,11 @@ const (
 var sin30, cos30 = math.Sin(angle), math.Cos(angle) // sin(30°), cos(30°)
 
 func main() {
-	http.HandleFunc("/", handler)
-	http.ListenAndServe("localhost:9090", nil)
+	/*http.HandleFunc("/", handler)
+	http.ListenAndServe("localhost:9090", nil)*/
+	a :=  [...]int{1,2,1,1}
+	var s []int
+	fmt.Printf("%T\n%T\n",a,s)
 }
 func handler(w http.ResponseWriter, r *http.Request) {
 
@@ -43,7 +46,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 			f := strconv.FormatFloat(cy, 'f', 2, 64)
 			g := strconv.FormatFloat(dx, 'f', 2, 64)
 			h := strconv.FormatFloat(dy, 'f', 2, 64)
-			str += "<polygon points='" + a + "," + b + "," + c + "," + d + "," + e + "," + f + "," + g + "," + h + "'/>\n"
+			str += "<polygon points='" + a + "," + b + ","  + c + "," + d + "," + e + "," + f + "," + g + "," + h + "'/>\n"
 		}
 	}
 	str += "</svg>"
